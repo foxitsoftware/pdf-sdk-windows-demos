@@ -1,0 +1,15 @@
+<h1><a href="/invoices">Unpaid Invoices</a></h1>
+
+{{#if success}}
+<p class="success"><strong>Success!</strong> The invoice has been sent to the client.</p>
+{{/if}}
+{{#if error}}
+<p class="error"><strong>Whoops!</strong> Something went wrong and your invoice could not be sent.</p>
+{{/if}}
+
+{{#each invoices}}
+<h3>{{this.customer}}</h3>
+<p>ID: {{this.id}} <br/>
+  <a href="/invoices/{{this.id}}">View</a> | <a href="/invoices/{{this.id}}/email">Email Reminder</a>
+</p>
+{{/each}}

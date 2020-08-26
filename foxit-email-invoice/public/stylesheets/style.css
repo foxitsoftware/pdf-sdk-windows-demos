@@ -1,0 +1,53 @@
+body {
+  background-color: #f7f7f7;
+  color: #333333;
+}
+
+a {
+  color: #156d6a;
+}
+
+h1 a,
+h2 a,
+h3 a {
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+}
+
+.container {
+  background-color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.muted {
+  color: #999999;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.footer p {
+  margin-top: 30px;
+}
+
+.success {
+  background-color: #c0f5f3;
+  color: #0d928d;
+  padding: 10px;
+}
+
+.error {
+  background-color: #f5c0c0;
+  color: #792525;
+  padding: 10px;
+}

@@ -1,0 +1,65 @@
+<div class="pure-g">
+  <div class="pure-u-1-2">
+    <h1>Invoice</h1>
+  </div>
+  <div class="pure-u-1-2" style="text-align: right;">
+    <p class="muted">Issued on {{ date }}</p>
+  </div>
+</div>
+
+<div class="pure-g">
+  <div class="pure-u-1-2">
+    <h3>Provider</h3>
+    <p>
+      <strong>Tiller, Inc.</strong><br/>
+      1255 S. Clark<br/>
+      Chicago, IL 60608
+    </p>
+  </div>
+  <div class="pure-u-1-2" style="text-align: right;">
+    <h3>Billed to</h3>
+    <p>
+      <strong>{{invoice.customer}}</strong><br/>
+      {{invoice.contact_name}}<br/>
+      {{invoice.address}}<br/>
+      {{invoice.city_state}}
+    </p>
+  </div>
+</div>
+
+<table class="pure-table pure-table-horizontal">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Plan Name</th>
+    <th class="text-right">Amount</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{invoice.plan_id}}</td>
+    <td>{{invoice.plan_name}}</td>
+    <td class="text-right">${{invoice.subtotal}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="text-right">Subtotal:</td>
+    <td class="text-right">${{invoice.subtotal}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="text-right">Taxes and Fees:</td>
+    <td class="text-right">${{invoice.fee}}</td>
+  </tr>
+  <tr class="bold">
+    <td></td>
+    <td class="text-right">Total:</td>
+    <td class="text-right">${{invoice.total}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="footer">
+  <p>Please make checks payable to <strong>Tiller, Inc</strong>. Invoices are due 30 days after date issued.</p>
+  <p>Thank you for your business!</p>
+</div>
