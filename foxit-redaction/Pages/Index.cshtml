@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<p>
+    The user's data looks like this:
+    <ul>
+        <li>Fullname: @Model.UserData.FullName</li>
+        <li>City: @Model.UserData.City</li>
+        <li>State: @Model.UserData.State</li>
+        <li>SIN: @Model.UserData.SIN</li>
+    </ul>
+</p>
+
+<br />
+
+<p>
+    You can generate a PDF with the user's data below 👇
+</p>
+
+<form asp-page-handler="PDF" method="POST">
+    <button type="submit" class="btn btn-primary">Generate PDF</button>
+</form>
+
+<br/>
+
+<form asp-page-handler="SecurePDF" method="POST">
+    <button type="submit" class="btn btn-primary">View Secured Version Of Generated PDF</button>
+</form>
