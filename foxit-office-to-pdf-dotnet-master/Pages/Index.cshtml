@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Convert Office Document To PDF!";
+}
+
+<div class="text-center">
+    <form enctype="multipart/form-data" method="post">
+        <div class="form-group">
+            <label asp-for="File" class="col-form-label">Upload either a Word, Powerpoint, Excel or HTML file:</label>
+            <input asp-for="File" type="file" class="form-control" />
+            <span asp-validation-for="File" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Convert To PDF!</button>
+        </div>
+    </form>
+</div>
